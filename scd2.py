@@ -8,7 +8,7 @@ def tMatMult (Mat1, Mat2):
     return np.dot(Mat1, Mat2)
 
 def make_A(th, l):
-    #3x3 homogeneous transform A = R(th) * T(l), calculation in the pdf
+    #3x3 homogeneous transform A = R(th) * T(l), calculation in the FKCalc-pt1.jpeg and FKCalc-pt2.jpeg
     return np.array([
         [mt.cos(th), -mt.sin(th), l * mt.cos(th)],
         [mt.sin(th),  mt.cos(th), l * mt.sin(th)],
@@ -50,4 +50,5 @@ for i in range(1, len(A)):
 
 print("Final Mat =")
 print(A_res)
+
 make_plot(A_res)
